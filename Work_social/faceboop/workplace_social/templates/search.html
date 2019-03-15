@@ -1,13 +1,38 @@
 {% extends "base.html" %}
 
-{% block title %}Faceboop Search{% endblock %}
-{% block nav_feed_class %}active{% endblock %}
-
 {% block content %}
+<br>
+Search for people according to their insterest...
+<br><br>
+
+<form action="." method="POST">
+    {% csrf_token %}
+<select>
+    <option value="sports">Sports</option>
+    <option value="coding">Coding</option>
+    <option value="music">Music</option>
+    <option value="film">Film</option>
+    <option value="celebrity_gossip">Celeberity Gossip</option>
+    <option value="art">Art</option>
+    <option value="philosophy">Philosophy</option>
+    <option value="beer">Beer</option>
+    <option value="wine">Wine</option>
+    <option value="gadgets">Gadgets</option>
+    <option value="gaming">Gaming</option>
+    <option value="politics">Politics</option>
+    <option value="activism">Activism</option>
+    <option value="environmentalism">Environmentalism</option>
+    <option value="cooking">Cooking</option>
+    <option value="coding">Coding</option>
+    <option value="crafts">Crafts</option>
+</select>
+    <button>Submit</button>
+</form>
+<br><br>
+
+{{results}}
 
 
-<h1>Results for "{{ term }}"</h1>
+    
+{% endblock content %}    
 
-{% include "post_loop_snippet.html" %}
-
-{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+Choose 5 interests...
+
+<form action="." method="POST">
+{% csrf_token %}
+<select name="interests" size="18" multiple>
+<option value="sports">Sports</option>
+<option value="coding">Coding</option>
+<option value="music">Music</option>
+<option value="film">Film</option>
+<option value="celebrity_gossip">Celeberity Gossip</option>
+<option value="art">Art</option>
+<option value="philosophy">Philosophy</option>
+<option value="beer">Beer</option>
+<option value="wine">Wine</option>
+<option value="gadgets">Gadgets</option>
+<option value="gaming">Gaming</option>
+<option value="politics">Politics</option>
+<option value="activism">Activism</option>
+<option value="environmentalism">Environmentalism</option>
+<option value="cooking">Cooking</option>
+<option value="coding">Coding</option>
+<option value="crafts">Crafts</option>
+
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+
+<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+
+
+    
+{% endblock content %}    
+

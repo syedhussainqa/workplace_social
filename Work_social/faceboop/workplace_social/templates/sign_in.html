@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+Welcome to Group Meet
+
+Please sign in
+
+<form action="." method="POST">
+    {% csrf_token %}
+    <input name="email" placeholder="email" />
+    <br>
+    <input name="password" placeholder="password" />
+    <button>Submit</button>
+</form>
+
+
+    
+{% endblock content %}    
+
