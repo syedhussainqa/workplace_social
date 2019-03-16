@@ -27,7 +27,7 @@ def homepage(request):
         if form.is_valid():
             # Create a new user object populated with the data we are
             # giving it from the cleaned_data form
-            user = User.objects.create(
+            user = User.objects.create_user(
                 username=form.cleaned_data['username'],
                 first_name=form.cleaned_data['first_name'],
                 last_name=form.cleaned_data['last_name'],
@@ -123,10 +123,14 @@ def all_users(request):
 
 ######### NEW FUNCTIONS ###############
 
-def questions(request):
+def questions(request, username):
     print('I am at function questions')
-    return render(request, 'questions.html')
-
+    user = User.objects.get(username=username)
+    context = {
+        'username': username,
+    }
+    print('I am at function questions')
+    return render(request, 'questions.html', context)
 
 def find_match(request):
     print('I am at function find_match')

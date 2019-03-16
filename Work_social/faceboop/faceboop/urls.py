@@ -20,7 +20,7 @@ from workplace_social import views
 
 urlpatterns = [
     path('', views.homepage, name="home"),
-    path('questions', views.questions),
+    path('user/<username>/questions', views.questions),
     path('user/find-match', views.find_match),
     # path('user/<username>/', views.user_feed, name="user_feed"),
     # path('delete-post/<post_id>/', views.delete_post),
