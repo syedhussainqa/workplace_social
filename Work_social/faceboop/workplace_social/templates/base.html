@@ -12,34 +12,71 @@
     
     <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/lumen/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+    <style>
+        .navbar-brand {
+{% comment %} font-family: 'Lilita One', cursive; {% endcomment %}
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 24pt;
+            {% comment %} margin-right: 50px; {% endcomment %}
+        }
+
+        body {
+    background:linear-gradient(0deg,#FCD470 0,#FBB658 100%);
+        }
+
+        .nav-link {
+            font-size: 16pt;
+        }
+        .navbar {
+            background: #ff6a00 !important;
+            border-color: #ff6a00;
+        }
+
+        form textarea,
+        form input {
+            font-size: 16pt;
+            max-height: 50px;
+            width: 300px;
+        }
+
+        form label {
+            font-size: 16pt;
+            font-weight: 200;
+            min-width: 100px;
+            vertical-align: top;
+        }
+        button.btn-lg {
+            font-size: 16pt;
+            background: #ff6a00 !important;
+            border-color: #ff6a00;
+        }
+    </style>
 
     {% endblock %}
 
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>Group Meet - a better way to find people like you</title>
-
-<!-- Bootstrap core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom fonts for this template -->
-<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link href="css/one-page-wonder.min.css" rel="stylesheet">
-
-</head>
-
-</head>
-
 <body>
-
+{% comment %} <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> {% endcomment %}
 
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
@@ -102,6 +139,31 @@
       <!-- place project specific Javascript in this file -->
 
     {% endblock javascript %}
+
+<section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="http://www.hackingadulthood.com/wp-content/uploads/2016/05/MakingFriends2-01.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Find new friends</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright © Group Meet 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
   </body>
 </html>
  
