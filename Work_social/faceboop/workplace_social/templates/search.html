@@ -2,9 +2,11 @@
 
 {% block content %}
 <br>
-Search for people according to their insterest...
+<p class="big_text">
+Search for people according to their interest...
+</p>
 <br><br>
-
+<div class="results_and_search_text">
 <form action="." method="POST">
     {% csrf_token %}
 <select>
@@ -31,6 +33,8 @@ Search for people according to their insterest...
 <br><br>
 
 {{results}}
+
+</div>
 
 
     

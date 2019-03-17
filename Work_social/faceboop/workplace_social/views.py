@@ -135,6 +135,15 @@ def questions(request, username):
     print('I am at function questions')
     return render(request, 'questions.html', context)
 
+def search(request, username):
+    print('I am at function search')
+    user = User.objects.get(username=username)
+    context = {
+        'username': username,
+    }
+    print('I am at function search')
+    return render(request, 'search.html', context)
+
 def find_match(request):
     print('I am at function find_match')
     return render(request, 'find_people.html')
