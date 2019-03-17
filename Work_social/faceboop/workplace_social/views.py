@@ -50,12 +50,15 @@ def homepage(request):
     return render(request, 'home.html', context)
 
 
+#Reroutes to the Questions page
 def all_users(request):
-    users = User.objects.all()
-    context = {
-        'users': users,
-    }
-    return render(request, 'user_list.html', context)
+    context = {}
+    #old code: 
+    # users = User.objects.all()
+    # context = {
+    #     'users': users,
+    # }
+    return render(request, 'questions.html', context)
 
 
 

@@ -34,7 +34,7 @@
             {% csrf_token %}
             <p><input placeholder="Username" name="username" /></p>
             <p><input placeholder="Password" type="password" name="password" /></p>
-            <p><button class="btn btn-success btn-lg">Login</button></p>
+            <p><button class="btn btn-success btn-lg" href="{% url "questions">Login</button></p>
         </form>
     </div>
 </div>
